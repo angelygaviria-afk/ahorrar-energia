@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi factura de energía</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+<body class="container py-3">
+    <header class="p-4 mb-4 bg-primary text-white rounded">
+        <h1>Mi factura de energía</h1>
+        <p>Factura de octubre de 2026: 43 kWh a 960,34 COP por kWh.</p>
+        <nav class="nav nav-pills">
+            <a class="nav-link text-white" href="index.html">Inicio</a>
+            <a class="nav-link text-white" href="equipos.html">Equipos de mi casa</a>
+            <a class="nav-link active bg-white text-primary" href="mi-factura.html">Mi factura</a>
+            <a class="nav-link text-white" href="encuesta.html">Encuesta de hábitos</a>
+            <a class="nav-link text-white" href="registro.html">Registrar un equipo</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>La factura</h2>
+            <p>Tapé el nombre, la dirección, el número de contrato y los códigos de pago.</p>
+            <div class="row g-3">
+                <div class="col-12 col-lg-5">
+                    <figure class="card h-100">
+                        <img class="card-img-top img-fluid" src="img/factura-resumen.jpg" alt="Resumen de la factura de energía de octubre de 2026: consumo de 43 kWh y valor de energía a pagar de 22.781,07 pesos; los datos personales están tapados con negro">
+                        <figcaption class="card-body">Resumen de facturación de octubre de 2026.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <figure class="card h-100">
+                        <img class="card-img-top img-fluid" src="img/factura-historial.jpg" alt="Parte de la factura con el cálculo 43 kWh por 960,340 pesos y la gráfica de barras del histórico de consumos en kWh de octubre de 2025 a octubre de 2026">
+                        <figcaption class="card-body">Valor del kWh, kWh del mes e histórico de consumos.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2>Historial de consumo</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <caption>Historial de consumo según la factura</caption>
+                    <thead>
+                        <tr>
+                            <th>Mes</th>
+                            <th>Días facturados</th>
+                            <th>kWh</th>
+                            <th>Valor (COP)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Octubre 2025</td><td>31</td><td>44</td><td>42.254,96 *</td></tr>
+                        <tr><td>Abril 2026</td><td>29</td><td>80</td><td>76.827,20 *</td></tr>
+                        <tr><td>Mayo 2026</td><td>32</td><td>33</td><td>31.691,22 *</td></tr>
+                        <tr><td>Junio 2026</td><td>29</td><td>1</td><td>960,34 *</td></tr>
+                        <tr><td>Julio 2026</td><td>30</td><td>2</td><td>1.920,68 *</td></tr>
+                        <tr><td>Agosto 2026</td><td>30</td><td>17</td><td>16.325,78 *</td></tr>
+                        <tr><td>Septiembre 2026</td><td>32</td><td>37</td><td>35.532,58 *</td></tr>
+                        <tr class="table-warning"><td>Octubre 2026 (actual) <span class="badge text-bg-primary"></span></td><td>30</td><td>43</td><td>41.294,62 (22.781,07 con subsidio)</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr><th colspan="2">Promedio de los últimos 6 meses (dato de la factura)</th><td colspan="2">28 kWh</td></tr>
+                    </tfoot>
+                </table>
+            </div>
+ 
+        </section>
+
+        <section class="mt-4">
+            <h2>Mi proyección y la factura</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr><th>Dato</th><th>kWh al mes</th><th>Valor (COP)</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Proyección de mis 4 equipos (<a href="equipos.html">equipos.html</a>)</td><td>31,82</td><td>30.559</td></tr>
+                    <tr><td>Factura de octubre 2026</td><td>43</td><td>41.294,62</td></tr>
+                    <tr class="table-danger"><td>Diferencia</td><td>11,18</td><td>10.735</td></tr>
+                </tbody>
+            </table>
+            <p>Mis 4 equipos explican unos <strong>32 de los 43 kWh</strong> (74&nbsp;%). La diferencia de
+               <strong>11 kWh</strong> se explica porque:</p>
+            <ul>
+                <li>En la tabla no se incluyen otro esas cosas que consumen siempre: la nevera, los bombillos, los cargadores de celular.</li>
+                <li>Las horas de uso son conjeturas; un día con más waflera o más computador cambia el total.</li>
+                <li>El regulador quedó calculado con su máxima potencia (450 W) y, por consiguiente, en la vida real gasta menos y la parte de las otras cosas consume aún más energía.</li>
+            </ul>
+            <div class="alert alert-success" role="alert">
+                Nuestro consumo diario fue de <strong>1,43 kWh</strong> (43 kWh ÷ 30 días), inferiror a la propuesta
+                diaria de <strong>4,33 kWh</strong> que viene en la factura.
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2>Sugerencias de ahorro familiar</h2>
+            <ol>
+                <li><strong>Apagar el regulador despues de usarlo.</strong> Según mis equipos es el 73&nbsp;% del consumo; si en vez de usarlo 2 horas de lunes a viernes solo lo dejamos encendido una hora ahorramos 2.25 kWh/semana (casi 2160 COP).</li>
+                <li><strong>Utilizar la waflera y licuadora fuera de 6 a 9 pm</strong> y preparar varias porciones de lo que se utiliza en una sola tanda, para no volver a enceder la waflera.</li>
+                <li><strong>No dejar el parlante cargando toda la noche</strong>: el tiempo de carga para la batería de 1500 mAh es de 2 horas.</li>
+                <li><strong>Revisar la nevera y los bombillos</strong>, que explican los 11 kWh que faltan: cambiar a LED y no abrir la nevera continuamente.</li>
+                <li><strong>Estar atento a que el consumo no vaya a volver a ocasiones como las de abril cuando se pasó a 80 kWh.</strong> Ese mes casi se duplica con respecto a la media de 28 kWh.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer class="mt-4 text-muted">
+        <p>Fuente: mi factura de energía de octubre de 2026.</p>
+        <p>Ingeniería Web I · IU Digital de Antioquia · 2026-2</p>
+    </footer>
+</body>
+</html>
